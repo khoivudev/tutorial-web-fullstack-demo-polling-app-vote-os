@@ -2,8 +2,10 @@ const path = require("path");
 const express = require("express");
 const cors = require("cors");
 const pollRouter = require("./routes/poll");
-const app = express();
+//DB config
+require("./config/db");
 
+const app = express();
 app.use(cors());
 //Body parser middleware
 app.use(express.urlencoded({ extended: true }));
